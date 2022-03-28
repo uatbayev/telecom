@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/page/{id}', [\App\Http\Controllers\PageController::class, 'list'])->name('page');
+Route::get('/config', [\App\Http\Controllers\Config\ConfigController::class, 'index']);
 
 
 Route::middleware('guest')->group(function(){
